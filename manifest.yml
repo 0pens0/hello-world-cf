@@ -1,0 +1,10 @@
+---
+applications:
+- name: hello-world
+  memory: 1024M
+  instances: 1
+  path: target/hello-world-1.0.0.jar
+  buildpacks:
+    - java_buildpack
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
